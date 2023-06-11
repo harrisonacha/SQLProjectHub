@@ -1,9 +1,10 @@
 /* The query below is used to create the database and also the table */
 
--- Create database with this query
+/* Create database with this query */
+
 CREATE DATABASE FIFA;
 
--- Create tables with this query
+/* Create tables with this query */
 
 CREATE TABLE fifa_2018 (
 	position serial not null,
@@ -70,5 +71,5 @@ CREATE TABLE fifa_2002 (
 	points int
 );
 
--- Import the query from the local folder using the query:
+/* Import the query from the local folder using the query: */
 	\COPY (file name) FROM '(filepath.csv)' DELIMITER ',' CSV HEADER;
