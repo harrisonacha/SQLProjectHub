@@ -1,4 +1,4 @@
--- Q1 How many countries have played in the WC (5 years)
+/*Q1 How many countries have played in the WC (5 years) */
 
 WITH
     cteFifa AS (
@@ -36,4 +36,5 @@ SELECT
     COUNT(DISTINCT team)
 FROM
     cteFifa
+
 
