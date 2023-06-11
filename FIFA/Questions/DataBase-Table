@@ -5,7 +5,7 @@ CREATE DATABASE FIFA;
 
 -- Create tables with this query
 
-CREAT TABLE fifa_2018 (
+CREATE TABLE fifa_2018 (
 	position serial not null,
 	team varchar(70) not null,
 	games_played int,
@@ -18,7 +18,7 @@ CREAT TABLE fifa_2018 (
 	points int
 );
 
-CREAT TABLE fifa_2014 (
+CREATE TABLE fifa_2014 (
 	position serial not null,
 	team varchar(70) not null,
 	games_played int,
@@ -31,7 +31,7 @@ CREAT TABLE fifa_2014 (
 	points int
 );
 
-CREAT TABLE fifa_2010 (
+CREATE TABLE fifa_2010 (
 	position serial not null,
 	team varchar(70) not null,
 	games_played int,
@@ -44,7 +44,7 @@ CREAT TABLE fifa_2010 (
 	points int
 );
 
-CREAT TABLE fifa_2006 (
+CREATE TABLE fifa_2006 (
 	position serial not null,
 	team varchar(70) not null,
 	games_played int,
@@ -57,7 +57,7 @@ CREAT TABLE fifa_2006 (
 	points int
 );
 
-CREAT TABLE fifa_2002 (
+CREATE TABLE fifa_2002 (
 	position serial not null,
 	team varchar(70) not null,
 	games_played int,
