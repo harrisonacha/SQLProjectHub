@@ -1,1 +1,53 @@
+/*Q3 Country with highest and lowest appearance in the last 5 years*/
 
+WITH
+    allFifa AS (
+        SELECT
+            'wc 2002' AS year,
+            *
+        FROM
+            fifa_2002
+        UNION ALL
+        SELECT
+            'wc 2006' AS year,
+            *
+        FROM
+            fifa_2006
+        UNION ALL
+        SELECT
+            'wc 2010' AS year,
+            *
+        FROM
+            fifa_2010
+        UNION ALL
+        SELECT
+            'wc 2014' AS year,
+            *
+        FROM
+            fifa_2014
+        UNION ALL
+        SELECT
+            'wc 2018' AS year,
+            *
+        FROM
+            fifa_2018
+    ),
+
+    teamAppearance AS (
+        SELECT
+            team,
+            COUNT(team) AS numAppearance
+        FROM
+            allFifa
+        GROUP BY
+            1
+        ORDER BY
+            2 DESC
+    )
+SELECT
+    *
+FROM
+    teamAppearance
+WHERE
+    numAppearance = (SELECT MAX(numAppearance) FROM teamAppearance)
+    OR numAppearance = (SELECT MIN(numAppearance) FROM teamAppearance)
